@@ -122,54 +122,6 @@ uv run LocalAIuse/stock_data_resource.py
 uv run LocalAIuse/creative_writing_prompt.py
 ```
 
-### Option 5: Testing MCP Servers
-
-For development and testing:
-
-```bash
-uv run mcp dev server.py
-```
-
-## Claude Desktop Configuration
-
-To use these servers with Claude Desktop, update your `claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "tavily": {
-      "command": "C:\\Users\\GIGO PETER\\.local\\bin\\uv.EXE",
-      "args": [
-        "run",
-        "D:\\D DRIVE\\Projects\\SearchEngineMCP\\server.py"
-      ],
-      "cwd": "D:\\D DRIVE\\Projects\\SearchEngineMCP"
-    },
-    "file-ops": {
-      "command": "C:\\Users\\GIGO PETER\\.local\\bin\\uv.EXE",
-      "args": [
-        "run",
-        "D:\\D DRIVE\\Projects\\SearchEngineMCP\\LocalAIuse\\file_management_tool.py"
-      ]
-    },
-    "stock-data": {
-      "command": "C:\\Users\\GIGO PETER\\.local\\bin\\uv.EXE",
-      "args": [
-        "run",
-        "D:\\D DRIVE\\Projects\\SearchEngineMCP\\LocalAIuse\\stock_data_resource.py"
-      ]
-    },
-    "creative-prompts": {
-      "command": "C:\\Users\\GIGO PETER\\.local\\bin\\uv.EXE",
-      "args": [
-        "run",
-        "D:\\D DRIVE\\Projects\\SearchEngineMCP\\LocalAIuse\\creative_writing_prompt.py"
-      ]
-    }
-  }
-}
-```
-
 ## AI Application Integration
 
 For AI applications, configure the servers in your application configuration file:
@@ -202,7 +154,18 @@ mcp_servers:
 2. Open Task Manager and end any remaining processes (search for the app name)
 3. Restart the application
 
-If processes become corrupted or node files break, simply run the desktop executable again to reset the application state.
+### Option 5: Testing MCP Servers
+
+For development and testing:
+
+```bash
+uv run mcp dev server.py
+```
+
+**Server URLs for Testing:**
+- **File Management Server:** `http://127.0.0.1/file/mcp`
+- **Stock Data Server:** `http://127.0.0.1/stock/mcp`
+- **Creative Writing Server:** `http://127.0.0.1/prompt/mcp`
 
 ## API Examples
 
