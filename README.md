@@ -38,7 +38,7 @@ This project includes four MCP servers, each providing different functionality:
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/0Jos-hua0/MCP-server-guide
    cd SearchEngineMCP
    ```
 
